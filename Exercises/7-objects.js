@@ -1,12 +1,17 @@
 'use strict';
 
-/* Do following tasks inside function `fn` (see stub: `7-objects.js`)
-- Define constant object with single field `name`.
-- Define variable object with single field `name`.
-- Try to change field `name`.
-- Try to assign other object to both identifiers.
-- Explain script behaviour. */
-
-const fn = null;
+const fn = () => {
+  const a = { name: 'Marcus' };
+  let b = { name: 'Marcus' };
+  a.name = 'Lucius';
+  b.name = 'Lucius';
+  try {
+    // eslint-disable-next-line no-const-assign
+    a = {};
+  } catch (e) {
+    console.log(e.message);
+  }
+  b = {};
+};
 
 module.exports = { fn };
